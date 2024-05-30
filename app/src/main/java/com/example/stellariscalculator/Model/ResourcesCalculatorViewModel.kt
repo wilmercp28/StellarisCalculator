@@ -1,48 +1,28 @@
 package com.example.stellariscalculator.Model
 
+
 import androidx.lifecycle.ViewModel
+import com.example.stellariscalculator.R
 
 class ResourcesCalculatorViewModel: ViewModel() {
 
-    val mineralsBasePrice = 1
-    val foodBasePrice = 1
-    val alloyBasePrice = 4
-    val consumerBasePrice = 2
-    val crystalsBasePrice = 10
-    val motesBasePrice = 10
-    val gasesBasePrice = 10
-    val darkMatterBasePrice = 20
-    val livingMetalBasePrice = 20
-    val zroBasePrice = 20
-
     var resourcesList = listOf<Resources>(
-        Resources("Energy",1),
-        Resources("Minerals",1),
-        Resources("Food",1),
-        Resources("Consumer Goods",2),
-        Resources("Alloy",4),
-        Resources("Rare Crystals",10),
-        Resources("Volatile Motes",10),
-        Resources("Exotics Gases",10),
-        Resources("Zro",20),
-        Resources("Living Metal",20),
-        Resources("Dark Matter",20),
-        Resources("Trade Value",1)
+        Resources("Energy",R.drawable.energy,1),
+        Resources("Minerals",R.drawable.minerals,1),
+        Resources("Food",R.drawable.food,1),
+        Resources("Consumer Goods",R.drawable.consumer_goods,2),
+        Resources("Alloy",R.drawable.alloys,4),
+        Resources("Rare Crystals",R.drawable.rare_crystals,10),
+        Resources("Volatile Motes",R.drawable.volatile_motes,10),
+        Resources("Exotics Gases",R.drawable.exotic_gases,10),
+        Resources("Zro", R.drawable.zro,20),
+        Resources("Living Metal",R.drawable.living_metal,20),
+        Resources("Dark Matter",R.drawable.dark_matter,20),
+        Resources("Trade Value",R.drawable.trade_value,1)
     )
 
     fun convert(resource1:Resources,resource2:Resources,quantity:Int): Float{
         return ((resource1.basePrice / resource2.basePrice) * quantity.toFloat())
     }
-
-
-
-
-
-
-
-
-
-
-
 
 }
